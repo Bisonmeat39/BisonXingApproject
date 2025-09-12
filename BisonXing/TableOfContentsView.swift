@@ -18,14 +18,6 @@ struct TableOfContentsView: View {
                     .frame(width: 150)
                     .padding()
                     .offset(y: -200)
-                NavigationLink(destination: BisonSafetyView()){
-                    Text("Bison Safety")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color.green)
-                                .cornerRadius(10)
-                }
                 NavigationLink(destination: BisonHistoryView()){
                     Text("Bison History")
                                 .font(.headline)
@@ -42,7 +34,22 @@ struct TableOfContentsView: View {
                                 .background(Color.green)
                                 .cornerRadius(10)
                 }
-                
+                NavigationLink(destination: BisonSafetyView()){
+                    Text("Bison Safety")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.green)
+                                .cornerRadius(10)
+                }
+                NavigationLink(destination: QuizView()){
+                    Text("Bison Quiz")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.green)
+                                .cornerRadius(10)
+                }
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

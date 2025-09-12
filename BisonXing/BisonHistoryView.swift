@@ -9,21 +9,29 @@ import SwiftUI
 
 struct BisonHistoryView: View {
     var body: some View {
-        VStack {
-            
-                Image("Bison Xing")
+        GeometryReader { geo in
+            ZStack {
+                
+                Image("BisonMap")
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 300)
-                    .padding()
-            Text("History")
-            
-            
+                    .scaledToFill()
+                    .frame(width: geo.size.width, height: geo.size.height, alignment: .bottomLeading)
+                    .clipped()
+                    .ignoresSafeArea(.all)
+                VStack{
+                    Spacer()
+                    YouTubeView(videoID: "sruWXhladJs")
+                        .aspectRatio(16/9, contentMode: .fit)
+                        .cornerRadius(12)
+                        .padding(.horizontal)
+                    Spacer()
+                    Text("History")
+                    Spacer()
+                }
+                
+            }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            RadialGradient(
-                gradient: Gradient(colors: [ .green, .black]), center: .center, startRadius: 50,endRadius: 500))
+        .ignoresSafeArea()
     }
 }
 

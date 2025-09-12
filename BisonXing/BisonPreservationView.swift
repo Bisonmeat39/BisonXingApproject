@@ -9,19 +9,21 @@ import SwiftUI
 
 struct BisonPreservationView: View {
     var body: some View {
-        VStack {
-            
-                Image("Bison Xing")
+        GeometryReader { geo in
+            ZStack {
+                
+                Image("BisonMap")
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 300)
-                    .padding()
-            Text("Preservation")
+                    .scaledToFill()
+                    .frame(width: geo.size.width, height: geo.size.height, alignment: .bottomLeading)
+                    .clipped()
+                    .ignoresSafeArea(.all)
+                Text("Preservation")
+                
+                
+            }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            RadialGradient(
-                gradient: Gradient(colors: [ .green, .black]), center: .center, startRadius: 50,endRadius: 500))
+        .ignoresSafeArea()
     }
 }
 
