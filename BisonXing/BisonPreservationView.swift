@@ -18,8 +18,27 @@ struct BisonPreservationView: View {
                     .frame(width: geo.size.width, height: geo.size.height, alignment: .bottomLeading)
                     .clipped()
                     .ignoresSafeArea(.all)
-                Text("Preservation")
-                
+                VStack(spacing: 40){
+                    YouTubeView(videoID: "OtF9QBQGMt4")
+                        .frame(width:200, height: 120)
+                        .aspectRatio(16/9, contentMode: .fit)
+                        .cornerRadius(12)
+                        .padding(.horizontal)
+                        .offset(x: -10,y: -70)
+                    YouTubeView(videoID: "XcjjOanUDcg")
+                        .frame(width:200, height: 120)
+                        .aspectRatio(16/9, contentMode: .fit)
+                        .cornerRadius(12)
+                        .padding(.horizontal)
+                        .offset(x: 40,y: 0)
+                    YouTubeView(videoID: "98Iff1lG8DY")
+                        .frame(width:200, height: 120)
+                        .aspectRatio(16/9, contentMode: .fit)
+                        .cornerRadius(12)
+                        .padding(.horizontal)
+                        .offset(x: 70,y: 175)
+
+                }
                 
             }
         }
